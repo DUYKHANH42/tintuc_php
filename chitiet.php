@@ -72,18 +72,8 @@
 
                         <!-- Author -->
                         <p class="text-muted mb-2">
-                            by <a href="#" class="text-decoration-none fw-semibold">Admin</a>
+                            by <a href="#" class="text-decoration-none fw-semibold">Duy Khanh</a>
                         </p>
-
-                        <!-- Preview Image -->
-                        <div class="mb-4">
-                            <img 
-                                src="img/tintuc/<?php echo $row['Hinh']; ?>"
-                                alt="<?php echo $row['TieuDeKhongDau']; ?>"
-                                class="img-fluid rounded w-100 shadow-sm img-responsive"
-                            >
-                        </div>
-
                         <!-- Date/Time -->
                         <p class="text-muted small mb-4">
                             <i class="glyphicon glyphicon-time"></i>
@@ -94,7 +84,13 @@
                             echo $time ? timeAgo($time) : "Đang cập nhật";
                             ?>
                         </p>
-
+                        <!-- Preview Image -->
+                        <div class="mb-4">
+                            <img 
+                                src="img/tintuc/<?php echo $row['Hinh']; ?>"
+                                alt="<?php echo $row['TieuDeKhongDau']; ?>"
+                                class="img-responsive center-block rounded shadow-sm">
+                        </div>
                         <hr>
 
                         <!-- Summary -->
