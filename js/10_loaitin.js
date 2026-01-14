@@ -14,7 +14,7 @@
     });
         });
         function LoadTin(idLoaiTin, p){
-            $.get("LoadTinTuc.php", {idLoaiTin, p}, function(data){
+            $.get("10_LoadTinTuc.php", {idLoaiTin, p}, function(data){
                 $("#loai-tin").html(data);
             });
         }

@@ -1,5 +1,5 @@
   <?php
-include_once "myFunct.php";
+include_once "10_myFunct.php";
 $theloai = getAllTheLoai();
 ?>
 <!DOCTYPE html>
@@ -21,19 +21,20 @@ $theloai = getAllTheLoai();
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
+    <link href="css/10_style.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <?php include "nav.php" ?>
+    <?php include "10_nav.php" ?>
     <!-- Page Content -->
     <div class="container main-content">
 	<!-- slider -->
-    <?php include "slider.php" ?>
+    <?php include "10_slider.php" ?>
         <!-- end slide -->
         <div class="space20"></div>
         <div class="row main-left">
             
-    <?php include "menuleft.php" ?>
+    <?php include "10_menuleft.php" ?>
             <div class="col-md-9">
                 <div class="panel panel-default">
     	            	<div class="panel-heading" style="background-color:#337AB7; color:white;" >
@@ -54,7 +55,7 @@ $theloai = getAllTheLoai();
                                         <h3 class="category-title">
                                             <span><?php echo $rtheloai['Ten']; ?></span>
                                             <small>
-                                                <a href="loaitin.php?idTheLoai=<?php echo $idTheLoai; ?>&idLoaiTin=<?php echo $idLoaiTin; ?>">
+                                                <a href="10_loaitin.php?idTheLoai=<?php echo $idTheLoai; ?>&idLoaiTin=<?php echo $idLoaiTin; ?>">
                                                     / <?php echo $rowlt['Ten']; ?>
                                                 </a>
                                             </small>
@@ -64,7 +65,7 @@ $theloai = getAllTheLoai();
                                                 <div class="news-item">
                                                     <div class="row">
                                                         <div class="col-md-3 col-sm-4 col-xs-12">
-                                                            <a href="chitiet.php?id=<?php echo $row['id']; ?>">
+                                                            <a href="10_chitiet.php?id=<?php echo $row['id']; ?>">
                                                                 <div class="news-thumb">
                                                                     <img src="img/tintuc/<?php echo $row['Hinh']; ?>" class="img-responsive">
                                                                     <span class="thumb-icon">➜</span>
@@ -80,7 +81,7 @@ $theloai = getAllTheLoai();
                                                             <p class="text-muted" style="max-height:3em; overflow:hidden;">
                                                                 <?php echo $row['TomTat']; ?>
                                                             </p>
-                                                            <a href="chitiet.php?id=<?php echo $row['id']; ?>"
+                                                            <a href="10_chitiet.php?id=<?php echo $row['id']; ?>"
                                                             class="btn btn-primary btn-sm read-more">
                                                                 Xem chi tiết <span class="arrow">➜</span>
                                                             </a>
@@ -104,7 +105,7 @@ $theloai = getAllTheLoai();
     </div>
     <!-- Footer -->
     <hr>
-    <?php include "footer.php" ?> 
+    <?php include "10_footer.php" ?> 
     <!-- end Footer -->
 </body>
  <!-- jQuery -->
@@ -112,6 +113,6 @@ $theloai = getAllTheLoai();
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/my.js"></script>
-    <script src="js/tintuc.js"></script>    
-    <script src="js/timkiem.js"></script>  
+    <script src="js/10_tintuc.js"></script>    
+    <script src="js/10_timkiem.js"></script>  
 </html>

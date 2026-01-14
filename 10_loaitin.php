@@ -17,12 +17,13 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
+    <link href="css/10_style.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <?php include "nav.php" ?>
+    <?php include "10_nav.php" ?>
     <!-- Page Content -->
     <div class="container main-content">
 
@@ -30,7 +31,7 @@
 
 
         <div class="row main-left">
-    <?php include "menuleft.php" ?>
+    <?php include "10_menuleft.php" ?>
                 <div id="loai-tin" class="col-md-9 ">
                 </div>
             </div> 
@@ -41,14 +42,14 @@
 
     <!-- Footer -->
     <hr>
-    <?php include "footer.php" ?> 
+    <?php include "10_footer.php" ?> 
     <!-- end Footer -->
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/my.js"></script>
-    <script src="js/loaitin.js"></script>
+    <script src="js/10_loaitin.js"></script>
 </body>
 
 </html>

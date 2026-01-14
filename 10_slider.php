@@ -1,5 +1,5 @@
 <?php
-include_once "myFunct.php";
+include_once "10_myFunct.php";
 $sliders = getAllSlider();
 $data=[];
 while($row = mysqli_fetch_assoc($sliders)) {

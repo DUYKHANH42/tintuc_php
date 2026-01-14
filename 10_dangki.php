@@ -1,5 +1,5 @@
 <?php
-    include "myFunct.php";
+    include "10_myFunct.php";
     if(isset($_POST['btnDangKy'])){
         $name = $_POST['name'];
         $email = $_POST['email'];
@@ -27,7 +27,7 @@
                 title: 'Thành công',
                 text: 'Đăng ký thành công'
             }).then((result) => {
-            window.location.href = 'dangnhap.php';    
+            window.location.href = '10_dangnhap.php';    
             },5000);";
         } else {
             $swal = "Swal.fire({
@@ -57,13 +57,15 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
-    <link href="css/my.css" rel="stylesheet">
+    <link href="css/my.css" rel="stylesheet">  
+    <link href="css/10_style.css" rel="stylesheet">
+
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <?php include "nav.php" ?>
+    <?php include "10_nav.php" ?>
     <!-- Page Content -->
     <div class="container">
 
@@ -100,6 +102,7 @@
 							<button type="submit" name="btnDangKy" class="btn btn-success">Đăng ký
 							</button>
 				    	</form>
+                        
 				  	</div>
 				</div>
             </div>

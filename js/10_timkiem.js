@@ -1,6 +1,6 @@
 $(document).ready(function() {
 function LoadTin(keyword, p){
-            $.post("timkiemAJAX.php", {keyword, p}, function(data){
+            $.post("10_timkiemAJAX.php", {keyword, p}, function(data){
                 $(".main-content").html(data);
             });
         }
@@ -10,5 +10,8 @@ function LoadTin(keyword, p){
                 var p = $(this).data("page");
                 var keyword = $(this).data("keyword");
                 LoadTin(keyword, p);
-        });
+        });       
+    $('#backToTop').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 1000);
     });
+});

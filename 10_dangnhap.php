@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "myFunct.php";
+include "10_myFunct.php";
 if(isset($_POST['btnDangNhap'])){
         $email = isset($_POST['email']) ? $_POST['email'] : "";
         $password = isset($_POST['password']) ? $_POST['password'] : "" ;
@@ -18,7 +18,7 @@ if(isset($_POST['btnDangNhap'])){
             $row = mysqli_fetch_assoc($kq);
             $_SESSION['name'] = $row['name'];
             $_SESSION['iduser'] = $row['id'];
-            $redirect = isset($_SESSION['saudangnhap']) ? $_SESSION['saudangnhap'] : 'index.php';
+            $redirect = isset($_SESSION['saudangnhap']) ? $_SESSION['saudangnhap'] : '10_index.php';
             unset($_SESSION['saudangnhap']);
             header("location:$redirect");
             exit;
@@ -52,12 +52,13 @@ if(isset($_POST['btnDangNhap'])){
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
+    <link href="css/10_style.css" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <?php include "nav.php" ?>
+    <?php include "10_nav.php" ?>
 
     <!-- Page Content -->
     <div class="container">
@@ -83,6 +84,11 @@ if(isset($_POST['btnDangNhap'])){
 							<br>
 							<button type="submit" name="btnDangNhap" class="btn btn-success">Đăng nhập
 							</button>
+                            <br>
+                            <p class="mt-2">
+                                Chưa có tài khoản?
+                                <a href="10_dangki.php">Đăng ký ngay</a>
+                            </p>
 				    	</form>
 				  	</div>
 				</div>

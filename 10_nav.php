@@ -13,16 +13,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">Tin Tức</a>
+                <a class="navbar-brand" href="10_index.php">Tin Tức</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="gioithieu.php">Giới thiệu</a>
+                        <a href="10_gioithieu.php">Giới thiệu</a>
                     </li>
                     <li>
-                        <a href="lienhe.php">Liên hệ</a>
+                        <a href="10_lienhe.php">Liên hệ</a>
                     </li>
                 </ul>
 
@@ -38,10 +38,10 @@
                         if(!isset($_SESSION['name'])){
                     ?>
                     <li>
-                        <a href="dangki.php">Đăng ký</a>
+                        <a href="10_dangki.php">Đăng ký</a>
                     </li>
                     <li>
-                        <a href="dangnhap.php">Đăng nhập</a>
+                        <a href="10_dangnhap.php">Đăng nhập</a>
                     </li>
                     <?php
                         }
@@ -55,7 +55,7 @@
                     </li>
 
                     <li>
-                    	<a href="logout.php">Đăng xuất</a>
+                    	<a href="10_logout.php">Đăng xuất</a>
                     </li>
                     <?php
                         }
@@ -65,4 +65,4 @@
         </div>
     </nav>
     <script src="js/jquery.js"></script>
-    <script src="js/nav.js"></script>
+    <script src="js/10_nav.js"></script>

@@ -1,5 +1,5 @@
 <?php
-include_once "myFunct.php";
+include_once "10_myFunct.php";
 $idLoaiTin = isset($_GET['idLoaiTin']) ? (int)$_GET['idLoaiTin'] : 0;
 getLoaiTinByID($idLoaiTin);
 $rowLoaiTin = mysqli_fetch_assoc(getLoaiTinByID($idLoaiTin));
@@ -21,7 +21,7 @@ $disableNext = ($p == $tst) ? "disabled" : "";
                     <?php while($row = mysqli_fetch_assoc($tinTucPaging)) {  ?>
                     <div class="row-item row news-item">
                             <div class="col-md-3">
-                                <a href="chitiet.php?id=<?php echo $row['id']; ?>">
+                                <a href="10_chitiet.php?id=<?php echo $row['id']; ?>">
                                     <div class="news-thumb">
                                         <img width="200" height="200"
                                             class="img-responsive"
@@ -37,7 +37,7 @@ $disableNext = ($p == $tst) ? "disabled" : "";
                                 <p><?php echo $row['TomTat']; ?></p>
 
                                 <a class="btn btn-primary read-more"
-                                href="chitiet.php?id=<?php echo $row['id']; ?>">
+                                href="10_chitiet.php?id=<?php echo $row['id']; ?>">
                                     View Project
                                     <span class="arrow">➜</span>
                                 </a>

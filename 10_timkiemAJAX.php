@@ -1,5 +1,5 @@
     <?php
-    include "myFunct.php";
+    include "10_myFunct.php";
 
     $keyword = $_POST['keyword'] ?? '';
     $p = $_POST['p'] ?? 1;
@@ -15,7 +15,7 @@
     <div class="space20"></div>
 
     <div class="row main-left">
-        <?php include "menuleft.php"; ?>
+        <?php include "10_menuleft.php"; ?>
 
         <div class="col-md-9">
             <?php if (mysqli_num_rows($dsTin) == 0): ?>
@@ -24,7 +24,7 @@
                 <?php while ($rowTin = mysqli_fetch_array($dsTin)) { ?>
                     <div class="row news-item">
                             <div class="col-md-3">
-                                <a href="chitiet.php?id=<?= $rowTin['id'] ?>">
+                                <a href="10_chitiet.php?id=<?= $rowTin['id'] ?>">
                                     <div class="news-thumb">
                                         <img class="img-responsive"
                                             src="img/tintuc/<?= $rowTin['Hinh'] ?>">
@@ -39,7 +39,7 @@
                                 <p><?= $rowTin['TomTat'] ?></p>
 
                                 <a class="btn btn-primary read-more"
-                                href="chitiet.php?id=<?= $rowTin['id'] ?>">
+                                href="10_chitiet.php?id=<?= $rowTin['id'] ?>">
                                     Xem chi tiết
                                     <span class="arrow">➜</span>
                                 </a>
@@ -75,5 +75,5 @@
     </div>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/my.js"></script>
-    <script src="js/tintuc.js"></script>  
-    <script src="js/timkiem.js"></script>  
+    <script src="js/10_tintuc.js"></script>  
+    <script src="js/10_timkiem.js"></script>  

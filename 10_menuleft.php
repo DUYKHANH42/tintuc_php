@@ -1,5 +1,5 @@
 <?php
-	include_once "myFunct.php";
+	include_once "10_myFunct.php";
 	$dsTheLoai = getAllTheLoai();
 ?> 
 <div class="col-md-3 ">

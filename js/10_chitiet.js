@@ -6,7 +6,9 @@ $(document).ready(function(){
                 let idComment = btn.data("idcomment");
                 let box = $(this).closest(".comment-item");
                 $(".formEdit").html("");
-                $.get("editcomment.php",{idComment}, function(data){    
+                btn.hide();
+                $(".btnDelete").hide();
+                $.get("10_editcomment.php",{idComment}, function(data){    
                     box.find(".formEdit").html(data);
                 });
             });
@@ -25,7 +27,7 @@ $(document).ready(function(){
                     });
                     return;
                 }
-                $.post("updatecomment.php",
+                $.post("10_updatecomment.php",
                     {
                         btnLuu: true,
                         noidung,
@@ -62,7 +64,7 @@ $(document).ready(function(){
                         cancelButtonText: 'Không'
                     }).then((result) => {
                         if (result.isConfirmed) {
-                            $.post("xoacomment.php", {
+                            $.post("10_xoacomment.php", {
                                 id: idComment
                             }, function (data) {
                                 if (data.trim() === "1") {
@@ -97,7 +99,7 @@ $(document).ready(function(){
                     });
                     return;
                 }
-                $.post("addcomment.php",
+                $.post("10_addcomment.php",
                     {
                         btnBinhLuan: true,
                         noidung,

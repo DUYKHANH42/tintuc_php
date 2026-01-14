@@ -17,19 +17,20 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
+    <link href="css/10_style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation -->
-    <?php include "nav.php" ?>
+    <?php include "10_nav.php" ?>
     <!-- Page Content -->
     <div class="container main-content">
     	<!-- slider -->
-    <?php include "slider.php" ?>
+    <?php include "10_slider.php" ?>
         <!-- end slide -->
         <div class="space20"></div>
         <div class="row main-left">
-    <?php include "menuleft.php" ?>
+    <?php include "10_menuleft.php" ?>
             <div class="col-md-9">
 	            <div class="panel panel-default">            
 	            	<div class="panel-heading" style="background-color:#337AB7; color:white;" >
@@ -64,7 +65,7 @@
 
     <!-- Footer -->
     <hr>
-    <?php include "footer.php" ?> 
+    <?php include "10_footer.php" ?> 
     <!-- end Footer -->
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

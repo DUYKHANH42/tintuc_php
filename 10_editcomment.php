@@ -1,5 +1,5 @@
 <?php
-include "myFunct.php";
+include "10_myFunct.php";
 $id = $_GET['idComment'] ?? 0;
 $cmt = GetCommentByID($id);
 $row = mysqli_fetch_assoc($cmt);

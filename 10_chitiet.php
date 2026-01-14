@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "myFunct.php";
+    include "10_myFunct.php";
     $id = isset($_GET['id']) ? $_GET['id'] : 0; 
     $tinTuc = getTinTucbyID($id);
     $row = mysqli_fetch_assoc($tinTuc);
@@ -34,22 +34,23 @@
     <!-- Custom CSS -->
     <link href="css/shop-homepage.css" rel="stylesheet">
     <link href="css/my.css" rel="stylesheet">
+    <link href="css/10_style.css" rel="stylesheet">
 
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <?php include "nav.php" ?>
+    <?php include "10_nav.php" ?>
     <!-- Page Content -->
 <div class="container main-content">
     <nav class="mb-4">
     <ol class="breadcrumb small">
         <li class="breadcrumb-item">
-            <a href="index.php">Trang chủ</a>
+            <a href="10_index.php">Trang chủ</a>
         </li>
         <li class="breadcrumb-item breadcrumb-loai-tin ">
-            <a class="text-primary" href="loaitin.php?idLoaiTin=<?php echo $row['idLoaiTin']; ?>">
+            <a class="text-primary" href="10_loaitin.php?idLoaiTin=<?php echo $row['idLoaiTin']; ?>">
                 <?php echo $row['Ten']; ?>
             </a>
         </li>
@@ -129,7 +130,7 @@
         ?>
             <div class="alert alert-info">
                 Vui lòng 
-                <a href="dangnhap.php" class="fw-semibold text-decoration-none">
+                <a href="10_dangnhap.php" class="fw-semibold text-decoration-none">
                     đăng nhập
                 </a>
                 để bình luận bài viết.
@@ -164,15 +165,17 @@
                                     echo timeAgo($time);
                                     ?>
                                 </small>
-                                    <?php if(isset($_SESSION['iduser']) && $_SESSION['iduser'] == $rowCmt['idUser']) { ?>
+                                <?php if(isset($_SESSION['iduser']) && $_SESSION['iduser'] == $rowCmt['idUser']) { ?>
+                                   
                                     <button 
                                         class="btnEdit btn btn-warning btn-xs"
                                         data-idcomment="<?php echo $rowCmt['id']; ?>">
                                         Sửa
                                     </button>
-                                    <a data-idcomment="<?php echo $rowCmt['id']; ?>" 
-                                    class="btnDelete btn btn-danger btn-xs">Xóa</a>
-                                <?php } ?>
+                                    <button data-idcomment="<?php echo $rowCmt['id']; ?>" 
+                                    class="btnDelete btn btn-danger btn-xs">Xóa</button>
+                                
+                                    <?php } ?>
                             </h4>
                             <div class="comment-content">
                             <?php echo $rowCmt['NoiDung'];?>
@@ -201,7 +204,7 @@
                         <?php while($rowLienQuan = mysqli_fetch_assoc($ttLienQuan)) { ?>
                         <div  style="margin-bottom:15px;">
                             <div class="media-left">
-                                <a href="chitiet.php?id=<?php echo $rowLienQuan['id']; ?>">
+                                <a href="10_chitiet.php?id=<?php echo $rowLienQuan['id']; ?>">
                                     <img 
                                         class="media-object img-thumbnail"
                                         src="img/tintuc/<?php echo $rowLienQuan['Hinh']; ?>"
@@ -212,7 +215,7 @@
                         </div>
                         <div class="media-body">
                                 <h5 class="media-heading" style="margin-top:0;">
-                                    <a href="chitiet.php?id=<?php echo $rowLienQuan['id']; ?>">
+                                    <a href="10_chitiet.php?id=<?php echo $rowLienQuan['id']; ?>">
                                         <b><?php echo $rowLienQuan['TieuDe']; ?></b>
                                     </a>
                                 </h5>
@@ -236,7 +239,7 @@
                 <?php while($rttnb = mysqli_fetch_assoc($ttLienQuanNoiBat)) { ?>
                 <div  style="margin-bottom:15px;">
                     <div class="media-left">
-                        <a href="chitiet.php?id=<?php echo $rttnb['id']; ?>">
+                        <a href="10_chitiet.php?id=<?php echo $rttnb['id']; ?>">
                             <img 
                                 class="media-object img-thumbnail"
                                 src="img/tintuc/<?php echo $rttnb['Hinh']; ?>"
@@ -247,7 +250,7 @@
                     </div>
                     <div class="media-body">
                         <h5 class="media-heading" style="margin-top:0;">
-                            <a href="chitiet.php?id=<?php echo $rttnb['id']; ?>">
+                            <a href="10_chitiet.php?id=<?php echo $rttnb['id']; ?>">
                                 <b><?php echo $rttnb['TieuDe']; ?></b>
                             </a>
                         </h5>
@@ -275,7 +278,7 @@
 
     <!-- Footer -->
     <hr>
-    <?php include "footer.php" ?> 
+    <?php include "10_footer.php" ?> 
     <!-- end Footer -->
      
     <!-- jQuery -->
@@ -290,7 +293,7 @@
             }
         ?>
     </script>
-    <script src="js/chitiet.js"></script>
+    <script src="js/10_chitiet.js"></script>
     
 </body>
 

@@ -1,18 +1,24 @@
-        <?php
-        session_start();
-        include "myFunct.php";
-        date_default_timezone_set('Asia/Ho_Chi_Minh');
-        if (isset($_POST['btnLuu'])) {
-        $id = isset($_POST['id']) ? $_POST['id'] : "";
-        $noidung = isset($_POST['noidung']) ? trim($_POST['noidung']) : '';
-        if ($id <= 0 || trim($noidung) === '') {
+<?php
+session_start();
+include "10_myFunct.php";
+$iduser = $_SESSION['iduser'];
+$idTinTuc = isset($_POST['idTinTuc']) ? $_POST['idTinTuc'] : 0;
+$noidung = isset($_POST['noidung']) ? $_POST['noidung'] : '';
+if(isset($_POST['btnBinhLuan'])) {
+    if (!$idTinTuc  || !$iduser|| trim($noidung) === '') {
             exit();
         }
-        EditComment($id, $noidung);
-        $idTin = isset($_POST['idTinTuc']) ? $_POST['idTinTuc'] : 0;
-        $comments = getCommentsByTinTuc($idTin);
-        ?>
-        <div class="media-body">
+$themCmt = AddComment( $iduser, $idTinTuc, $noidung);
+$comments = getCommentsByTinTuc($idTinTuc);
+$countcmt = mysqli_num_rows($comments);
+?>
+<div class="media-header mb-3">
+            <h4 class="text-uppercase text-muted">
+                Bình luận (<?php echo $countcmt ?? 0; ?>)
+            </h4>
+            <hr>
+        </div>
+<div class="media-body">
                             <?php
                                 while($rowCmt = mysqli_fetch_assoc($comments)){
                             ?>
